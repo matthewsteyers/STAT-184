@@ -1,0 +1,23 @@
+---
+title: "R Notebook"
+author: "Matthew Steyers"
+date: "Friday, April 8, 2022"
+output: html_notebook
+---
+
+### Load Packages
+```{r message=FALSE, warning=FALSE}
+library(tidyverse)
+```
+
+### Read in Data
+```{r message=FALSE, warning=FALSE}
+golfdata <- read.delim(file = "Data_RegEx2.txt", fileEncoding = "UTF-8",quote = "")
+```
+
+### Clean Data
+```{r message=FALSE, warning=FALSE}
+FirstClean <-  golfdata%>%
+  as.data.frame(matrix(1:16, ncol = 16, byrow = TRUE))
+```
+
